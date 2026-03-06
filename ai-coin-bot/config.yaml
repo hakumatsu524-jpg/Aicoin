@@ -1,0 +1,33 @@
+# AI Coin Buyback Bot Configuration
+# ===================================
+
+# Token Configuration
+coin_address: ""  # Your PumpFun token address (or set COIN_ADDRESS env var)
+
+# Solana RPC Configuration
+rpc_url: "https://api.mainnet-beta.solana.com"  # Or use a private RPC for better performance
+
+# Analysis Settings
+check_interval: 60          # Seconds between analysis cycles
+candle_timeframe: "15m"     # Timeframe for candle data (1m, 5m, 15m, 1h)
+lookback_candles: 100       # Number of candles to analyze
+
+# AI Decision Settings
+min_confidence: 0.70        # Minimum AI confidence (0.0-1.0) required to execute
+model: "gpt-4-turbo-preview"  # OpenAI model to use
+
+# Buyback Execution Settings
+max_buyback_sol: 0.5        # Maximum SOL to spend per buyback
+min_rewards_threshold: 0.01 # Minimum SOL balance required to attempt buyback
+cooldown_minutes: 30        # Minutes to wait between buybacks
+slippage_bps: 500           # Slippage tolerance in basis points (500 = 5%)
+
+# Risk Management
+daily_max_buybacks: 10      # Maximum buybacks per 24 hours
+daily_max_sol: 5.0          # Maximum SOL to spend per 24 hours
+
+# Notifications (future feature)
+enable_notifications: true
+# discord_webhook: ""
+# telegram_bot_token: ""
+# telegram_chat_id: ""
